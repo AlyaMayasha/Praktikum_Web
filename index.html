@@ -6,84 +6,127 @@
   <title>Lovegoods Studio - Reservasi Foto Studio</title>
 </head>
 <body>
-  <!-- Header -->
+
   <header>
     <h1>Lovegoods Studio</h1>
     <nav>
       <ul>
         <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#paket">Paket</a></li>
+        <li><a href="#galeri">Studio</a></li>
         <li><a href="#lokasi">Lokasi</a></li>
-        <li><a href="#jadwal">Jadwal</a></li>
+        <li><a href="#reservasi">Reservasi</a></li>
         <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#masuk">Masuk</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
+  
   <main>
-    <!-- Beranda -->
     <section id="beranda">
       <h2>Selamat Datang di Lovegoods Studio</h2>
       <p>
-        “Setiap momen adalah cerita, dan di Lovegoods Studio kami percaya bahwa cerita itu layak dipotret dengan sentuhan magis. 
-        Rasakan suasana dreamy & fairy yang akan membuat kenangan Anda tampak seperti dongeng abadi.”
+        “Setiap momen adalah cerita, di Lovegoods Studio kami percaya bahwa cerita itu layak dipotret dengan sentuhan magis. 
+        Rasakan suasana dreamy & fairy yang akan membuat kenangan Anda tampak seperti dongeng abadi! ^-^ ”
       </p>
     </section>
 
-    <!-- Paket -->
-    <section id="paket">
-      <h2>Paket Foto</h2>
-      <article>
-        <h3>Paket Basic</h3>
-        <p>Foto studio sederhana dengan 5 hasil edit.</p>
-      </article>
-      <article>
-        <h3>Paket Premium</h3>
-        <p>Foto studio lengkap dengan 15 hasil edit + cetak album mini.</p>
-      </article>
-      <article>
-        <h3>Paket Exclusive</h3>
-        <p>Foto studio all-in-one dengan 25 hasil edit + cetak album & frame.</p>
-      </article>
+    <section id="galeri">
+      <h2>Pilihan Studio Kami</h2>
+
+      <figure>
+        <img src="studioA.jpeg" alt="Studio A - Pastel Dream" width="300">
+        <figcaption>
+          <strong>Studio A – Pastel Dream</strong><br>
+          Background: Soft Pink Pastel<br>
+          Kapasitas: 2–5 orang<br>
+          Printed Foto: 15 lembar<br>
+          Sesi: 30 Menit<br>
+          Harga: 75.000/sesi<br>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="studioB.jpeg" alt="Studio B - Classic White" width="300">
+        <figcaption>
+          <strong>Studio B – Classic White</strong><br>
+          Background: Putih Ivory dengan detail ukiran klasik<br>
+          Kapasitas: 7–10 orang<br>
+          Printed Foto: 20 lembar<br>
+          Sesi: 60 menit<br>
+          Harga: 150.000/sesi<br>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="studioC.jpeg" alt="Studio C - Fairy Garden" width="300">
+        <figcaption>
+          <strong>Studio C – Fairy Garden</strong><br>
+          Background: Putih dengan tirai renda transparan, jendela kaca besar, dan sentuhan hijau alami di luar jendela<br>
+          Kapasitas: 2–5 orang<br>
+          Printed Foto: 10 lembar<br>
+          Sesi: 20 menit<br>
+          Harga: 50.000/sesi<br>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="studioD.jpeg" alt="Studio D - Classic Charm" width="300">
+        <figcaption>
+          <strong>Studio D – Classic Charm</strong><br>
+          Background: Teal dengan motif ornamen emas klasik<br>
+          Kapasitas: 1–3 orang<br>
+          Printed Foto: 7 lembar<br>
+          Sesi: 15 menit<br>
+          Harga: 45.000/sesi<br>
+        </figcaption>
+      </figure>
     </section>
 
-    <!-- Lokasi -->
     <section id="lokasi">
       <h2>Lokasi Studio</h2>
-      <p>Lovegoods Studio, Jl. Merdeka No. 123, Jakarta.</p>
-      <p>(Tambahkan peta atau link Google Maps bila diperlukan)</p>
+      <p>Lovegoods Studio, Jl. Delima No. 123, Dimana yook?.</p>
     </section>
 
-    <!-- Jadwal -->
-    <section id="jadwal">
-      <h2>Jadwal Reservasi</h2>
-      <form>
-        <label for="tanggal">Cek Jadwal Tanggal:</label><br>
-        <input type="date" id="tanggal" name="tanggal"><br><br>
-        <button type="submit">Cek Jadwal</button>
-      </form>
+    <section id="reservasi">
+  <h2>Reservasi Studio</h2>
+  <form>
+    <label for="nama">Nama:</label><br>
+    <input type="text" id="nama" name="nama" required><br><br>
 
-      <!-- Placeholder untuk hasil jadwal -->
-      <div id="hasil-jadwal">
-        <!-- Jadwal ketersediaan akan ditampilkan di sini -->
-      </div>
-    </section>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-    <!-- Kontak -->
+    <label for="studio">Pilih Studio:</label><br>
+    <select id="studio" name="studio" required>
+      <option value="studioA">Studio A - Pastel Dream</option>
+      <option value="studioB">Studio B - Classic White</option>
+      <option value="studioC">Studio C - Fairy Garden</option>
+      <option value="studioD">Studio D - Classic Charm</option>
+    </select><br><br>
+
+    <label for="tanggal">Tanggal Reservasi:</label><br>
+    <input type="date" id="tanggal" name="tanggal" required><br><br>
+    <label for="jam">Jam Reservasi:</label><br>
+    <input type="time" id="jam" name="jam" required><br><br>
+
+    <button type="submit">Kirim Reservasi</button>
+  </form>
+</section>
+
     <section id="kontak">
       <h2>Kontak Kami</h2>
       <address>
         <p>Email: lovegoodsstudio@example.com</p>
-        <p>Telepon: +62 812 3456 7890</p>
-        <p>Alamat: Jl. Merdeka No. 123, Jakarta</p>
+        <p>Telepon: +62 812 345 678 90</p>
+        <p>Alamat: Jl. Delima No. 123, Samarinda sonoan dikit</p>
       </address>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Lovegoods Studio. Semua Hak Dilindungi.</p>
+    <a href="https://rjb-studio.com/">Referensi</a>
   </footer>
 </body>
 </html>
