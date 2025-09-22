@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lovegoods Studio - Reservasi Foto Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -21,7 +25,6 @@
     </nav>
   </header>
 
-  
   <main>
     <section id="beranda">
       <h2>Selamat Datang di Lovegoods Studio</h2>
@@ -34,92 +37,98 @@
     <section id="galeri">
       <h2>Pilihan Studio Kami</h2>
 
-      <figure>
-        <img src="studioA.jpeg" alt="Studio A - Pastel Dream" width="300">
-        <figcaption>
-          <strong>Studio A – Pastel Dream</strong><br>
-          Background: Soft Pink Pastel<br>
-          Kapasitas: 2–5 orang<br>
-          Printed Foto: 15 lembar<br>
-          Sesi: 30 Menit<br>
-          Harga: 75.000/sesi<br>
-        </figcaption>
-      </figure>
+      <div class="studio-grid">
+        <figure class="card">
+          <img src="studioA.jpeg" alt="Studio A - Pastel Dream">
+          <figcaption>
+            <strong>Studio A – Pastel Dream</strong><br>
+            Background: Soft Pink Pastel<br>
+            Kapasitas: 2–5 orang<br>
+            Printed Foto: 15 lembar<br>
+            Sesi: 30 Menit<br>
+            Harga: 75.000/sesi<br>
+          </figcaption>
+        </figure>
 
-      <figure>
-        <img src="studioB.jpeg" alt="Studio B - Classic White" width="300">
-        <figcaption>
-          <strong>Studio B – Classic White</strong><br>
-          Background: Putih Ivory dengan detail ukiran klasik<br>
-          Kapasitas: 7–10 orang<br>
-          Printed Foto: 20 lembar<br>
-          Sesi: 60 menit<br>
-          Harga: 150.000/sesi<br>
-        </figcaption>
-      </figure>
+        <figure class="card">
+          <img src="studioB.jpeg" alt="Studio B - Classic White">
+          <figcaption>
+            <strong>Studio B – Classic White</strong><br>
+            Background: Putih Ivory dengan detail ukiran klasik<br>
+            Kapasitas: 7–10 orang<br>
+            Printed Foto: 20 lembar<br>
+            Sesi: 60 menit<br>
+            Harga: 150.000/sesi<br>
+          </figcaption>
+        </figure>
 
-      <figure>
-        <img src="studioC.jpeg" alt="Studio C - Fairy Garden" width="300">
-        <figcaption>
-          <strong>Studio C – Fairy Garden</strong><br>
-          Background: Putih dengan tirai renda transparan, jendela kaca besar, dan sentuhan hijau alami di luar jendela<br>
-          Kapasitas: 2–5 orang<br>
-          Printed Foto: 10 lembar<br>
-          Sesi: 20 menit<br>
-          Harga: 50.000/sesi<br>
-        </figcaption>
-      </figure>
+        <figure class="card">
+          <img src="studioC.jpeg" alt="Studio C - Fairy Garden">
+          <figcaption>
+            <strong>Studio C – Fairy Garden</strong><br>
+            Background: Putih dengan tirai renda transparan, jendela kaca besar, dan sentuhan hijau alami di luar jendela<br>
+            Kapasitas: 2–5 orang<br>
+            Printed Foto: 10 lembar<br>
+            Sesi: 20 menit<br>
+            Harga: 50.000/sesi<br>
+          </figcaption>
+        </figure>
 
-      <figure>
-        <img src="studioD.jpeg" alt="Studio D - Classic Charm" width="300">
-        <figcaption>
-          <strong>Studio D – Classic Charm</strong><br>
-          Background: Teal dengan motif ornamen emas klasik<br>
-          Kapasitas: 1–3 orang<br>
-          Printed Foto: 7 lembar<br>
-          Sesi: 15 menit<br>
-          Harga: 45.000/sesi<br>
-        </figcaption>
-      </figure>
+        <figure class="card">
+          <img src="studioD.jpeg" alt="Studio D - Classic Charm">
+          <figcaption>
+            <strong>Studio D – Classic Charm</strong><br>
+            Background: Teal dengan motif ornamen emas klasik<br>
+            Kapasitas: 1–3 orang<br>
+            Printed Foto: 7 lembar<br>
+            Sesi: 15 menit<br>
+            Harga: 45.000/sesi<br>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <section id="lokasi">
       <h2>Lokasi Studio</h2>
-      <p>Lovegoods Studio, Jl. Delima No. 123, Dimana yook?.</p>
+      <div class="location-card">
+        <p>Lovegoods Studio</p>
+        <p>Jl. Delima No. 123, Cousins Beach</p>
+      </div>
     </section>
 
     <section id="reservasi">
-  <h2>Reservasi Studio</h2>
-  <form>
-    <label for="nama">Nama:</label><br>
-    <input type="text" id="nama" name="nama" required><br><br>
+      <h2>Reservasi Studio</h2>
+      <form>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="studio">Pilih Studio:</label><br>
-    <select id="studio" name="studio" required>
-      <option value="studioA">Studio A - Pastel Dream</option>
-      <option value="studioB">Studio B - Classic White</option>
-      <option value="studioC">Studio C - Fairy Garden</option>
-      <option value="studioD">Studio D - Classic Charm</option>
-    </select><br><br>
+        <label for="studio">Pilih Studio:</label>
+        <select id="studio" name="studio" required>
+          <option value="studioA">Studio A - Pastel Dream</option>
+          <option value="studioB">Studio B - Classic White</option>
+          <option value="studioC">Studio C - Fairy Garden</option>
+          <option value="studioD">Studio D - Classic Charm</option>
+        </select>
 
-    <label for="tanggal">Tanggal Reservasi:</label><br>
-    <input type="date" id="tanggal" name="tanggal" required><br><br>
-    <label for="jam">Jam Reservasi:</label><br>
-    <input type="time" id="jam" name="jam" required><br><br>
+        <label for="tanggal">Tanggal Reservasi:</label>
+        <input type="date" id="tanggal" name="tanggal" required>
 
-    <button type="submit">Kirim Reservasi</button>
-  </form>
-</section>
+        <label for="jam">Jam Reservasi:</label>
+        <input type="time" id="jam" name="jam" required>
+
+        <button type="submit" class="btn btn-primary">Kirim Reservasi</button>
+      </form>
+    </section>
 
     <section id="kontak">
       <h2>Kontak Kami</h2>
       <address>
-        <p>Email: lovegoodsstudio@example.com</p>
+        <p>Email: lovegoodsstudio@gmail.com</p>
         <p>Telepon: +62 812 345 678 90</p>
-        <p>Alamat: Jl. Delima No. 123, Samarinda sonoan dikit</p>
+        <p>Alamat: Jl. Delima No. 123, Cousins Beach</p>
       </address>
     </section>
   </main>
@@ -128,5 +137,6 @@
     <p>&copy; 2025 Lovegoods Studio. Semua Hak Dilindungi.</p>
     <a href="https://rjb-studio.com/">Referensi</a>
   </footer>
+
 </body>
 </html>
