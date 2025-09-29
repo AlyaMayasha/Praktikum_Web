@@ -23,6 +23,7 @@
         <li><a href="#masuk">Masuk</a></li>
       </ul>
     </nav>
+    <button id="mode-toggle" aria-label="Toggle Dark Mode">🌚</button>
   </header>
 
   <main>
@@ -117,8 +118,8 @@
         <input type="date" id="tanggal" name="tanggal" required>
 
         <label for="jam">Jam Reservasi:</label>
-        <input type="time" id="jam" name="jam" required>
-
+        <input type="time" id="jam" name="jam" required min="08:00" max="21:00">
+    
         <button type="submit" class="btn btn-primary">Kirim Reservasi</button>
       </form>
     </section>
@@ -138,5 +139,6 @@
     <a href="https://rjb-studio.com/">Referensi</a>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

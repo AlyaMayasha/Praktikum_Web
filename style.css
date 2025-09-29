@@ -212,3 +212,86 @@ footer a:hover {
   font-family: 'Poppins', sans-serif;
 }
 
+body.dark-mode {
+  background-color: #121212; 
+  color: #e0e0e0; 
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #2c0504; 
+  color: #ffccd2; 
+}
+
+body.dark-mode #beranda p {
+    color: #e0e0e0; 
+}
+
+body.dark-mode header h1 {
+  color: #ffccd2; 
+}
+
+body.dark-mode header nav ul li a {
+  color: #e0e0e0;
+}
+
+body.dark-mode header nav ul li a:hover {
+  color: #ffb6c1; 
+}
+
+body.dark-mode section h2,
+body.dark-mode #beranda h2,
+body.dark-mode form label {
+  color: #ffb6c1; 
+}
+
+body.dark-mode .card {
+  background: #1e1e1e; 
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card:hover {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .location-card {
+  background-color: #1e1e1e;
+  border: 2px dashed #ffb6c1; 
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .location-card p {
+  color: #e0e0e0;
+}
+
+body.dark-mode form input,
+body.dark-mode form select {
+  background-color: #2b2b2b;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode form input:focus,
+body.dark-mode form select:focus {
+  border-color: #ffb6c1;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #ffb6c1; 
+  color: #121212;
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #ffccd2;
+}
+
+#mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    padding: 0;
+    line-height: 1;
+    color: #f5f5dc; 
+}
