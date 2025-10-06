@@ -1,0 +1,158 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php'); 
+    exit;
+}
+
+$username = $_SESSION['username'];
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovegoods Studio - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lovegoods Studio</h1>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#galeri">Studio</a></li>
+                <li><a href="#lokasi">Lokasi</a></li>
+                <li><a href="#reservasi">Reservasi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="logout.php">Logout</a></li> 
+            </ul>
+        </nav>
+        <button id="mode-toggle" aria-label="Toggle Dark Mode">🌚</button>
+    </header>
+
+    <main>
+        <section id="beranda">
+            <h2>Haii <?php echo htmlspecialchars($username); ?>! Selamat Datang di Lovegoods Studio</h2>
+            </p>
+            <p>
+                “Setiap momen adalah cerita, di Lovegoods Studio kami percaya bahwa cerita itu layak dipotret dengan sentuhan magis. 
+                Rasakan suasana dreamy & fairy yang akan membuat kenangan Anda tampak seperti dongeng abadi! ^-^ ”
+            </p>
+        </section>
+
+        <section id="galeri">
+      <h2>Pilihan Studio Kami</h2>
+
+      <div class="studio-grid">
+        <figure class="card">
+          <img src="studioA.jpeg" alt="Studio A - Pastel Dream">
+          <figcaption>
+            <strong>Studio A – Pastel Dream</strong><br>
+            Background: Soft Pink Pastel<br>
+            Kapasitas: 2–5 orang<br>
+            Printed Foto: 15 lembar<br>
+            Sesi: 30 Menit<br>
+            Harga: 75.000/sesi<br>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="studioB.jpeg" alt="Studio B - Classic White">
+          <figcaption>
+            <strong>Studio B – Classic White</strong><br>
+            Background: Putih Ivory dengan detail ukiran klasik<br>
+            Kapasitas: 7–10 orang<br>
+            Printed Foto: 20 lembar<br>
+            Sesi: 60 menit<br>
+            Harga: 150.000/sesi<br>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="studioC.jpeg" alt="Studio C - Fairy Garden">
+          <figcaption>
+            <strong>Studio C – Fairy Garden</strong><br>
+            Background: Putih dengan tirai renda transparan, jendela kaca besar, dan sentuhan hijau alami di luar jendela<br>
+            Kapasitas: 2–5 orang<br>
+            Printed Foto: 10 lembar<br>
+            Sesi: 20 menit<br>
+            Harga: 50.000/sesi<br>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="studioD.jpeg" alt="Studio D - Classic Charm">
+          <figcaption>
+            <strong>Studio D – Classic Charm</strong><br>
+            Background: Teal dengan motif ornamen emas klasik<br>
+            Kapasitas: 1–3 orang<br>
+            Printed Foto: 7 lembar<br>
+            Sesi: 15 menit<br>
+            Harga: 45.000/sesi<br>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="lokasi">
+      <h2>Lokasi Studio</h2>
+      <div class="location-card">
+        <p>Lovegoods Studio</p>
+        <p>Jl. Delima No. 123, Cousins Beach</p>
+      </div>
+    </section>
+
+    <section id="reservasi">
+      <h2>Reservasi Studio</h2>
+      <form>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="studio">Pilih Studio:</label>
+        <select id="studio" name="studio" required>
+          <option value="studioA">Studio A - Pastel Dream</option>
+          <option value="studioB">Studio B - Classic White</option>
+          <option value="studioC">Studio C - Fairy Garden</option>
+          <option value="studioD">Studio D - Classic Charm</option>
+        </select>
+
+        <label for="tanggal">Tanggal Reservasi:</label>
+        <input type="date" id="tanggal" name="tanggal" required>
+
+        <label for="jam">Jam Reservasi:</label>
+        <input type="time" id="jam" name="jam" required min="08:00" max="21:00">
+    
+        <button type="submit" class="btn btn-primary">Kirim Reservasi</button>
+      </form>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak Kami</h2>
+      <address>
+        <p>Email: lovegoodsstudio@gmail.com</p>
+        <p>Telepon: +62 812 345 678 90</p>
+        <p>Alamat: Jl. Delima No. 123, Cousins Beach</p>
+      </address>
+    </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lovegoods Studio. Semua Hak Dilindungi.</p>
+        <a href="https://rjb-studio.com/">Referensi</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
